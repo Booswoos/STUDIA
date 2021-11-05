@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="StyleSheet2.css">
+
+    <title>My Hobby</title>
+
+
+    <script>
+  //clock
+
+
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById("ClockDisplay").innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+
+    //DROP Menu
+
+function Drop_Function(){
+    var status = document.getElementById("dropthis");
+    if (status.style.display == "none") { status.style.display = "block"; but.style.backgroundColor="black"; }
+    else { status.style.display = "none";}
+
+}
+
+
+function surprise() {
+    var color;
+    color = Math.floor(Math.random() * 21455657).toString(16);
+    document.body.style.backgroundColor = "#"+color;
+}
+
+
+
+
+    </script>
+
+
+</head>
+
+<body onload="startTime()">
+
+
+    <header id="header">
+
+        ROBOTYKA
+
+
+
+        <div class="icon">
+            <a href="https://www.facebook.com">
+                <img src="icons/FB.png" id="fb" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com">
+                <img src="icons/IG.png" id="ig" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com">
+                <img src="icons/YT.png" id="yt" alt="Youtube">
+            </a>
+
+        </div>
+
+
+
+    </header>
+
+
+
+    <section>
+        <nav>
+
+            <a href="schedule.html">Schedule</a>
+            <a href="page.html">Aktualności</a>
+            
+            <button class="drop" onclick="Drop_Function()" id="but">
+                Galeria
+            </button>
+            <div class="dropdown-container" id="dropthis">
+                <a href="gallery_2019.html">2019 </a>
+                <a href="gallery.html">2020 </a>
+                <a href="">2021 </a>
+            </div>
+            <a href="">Contact</a>
+
+        </nav>
+
+
+
+        <article onclick="surprise()">
+            <form>
+                <a class="wyszukaj">Podaj dane kontaktowe:</a><br>
+                <input type="text" name="idk" value="Imie"><br>
+                <input type="text" name="idk2" value="Nazwisko"><br>
+                <input type="text" name="idk3" value="Email"><br>
+                <textarea name="idk4" rows="6" cols="60"></textarea>
+
+                <br />
+                <input type="radio" name="gender" value="male" checked> Male<br>
+
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other">?Other?<br>
+
+
+
+                <input type="checkbox" name="check" value="blank">Regulamin RODO
+                <br>
+
+                <input class="animation" type="submit" value="Submit" onclick=alert("wyslano")>
+
+                <input class="animation" type="reset" value="Reset">
+
+            </form>
+        </article>
+
+
+
+        <div id="add">
+            <div id="ClockDisplay" class="clock">
+
+            </div>
+
+        </div>
+        
+
+
+    </section>
+
+
+    <footer>
+        Bartosz Janicki
+        <br />
+        s185860 ACiR I
+    </footer>
+
+
+
+
+</body>
+</html>

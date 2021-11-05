@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+
+<spis  xmlns:data_zamowienia="20.10.2020"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="urn:My.Namespace"
+      xsi:schemaLocation="urn:My.Namespace schema.xsd">
+
+  <komentarz>trzy towary dwie uslugi</komentarz>
+  
+  <towar xmlns:kod_produktu="SSN-125-FM" xmlns:data_zamowienia="2020-10-11">
+    <inf link="https://botland.com.pl/pl/diody-led/4538-dioda-led-8mm-czerwona-10szt.html">
+      <nazwa>Dioda LED 8mm czerwona</nazwa>
+      <rodzaj>dioda</rodzaj>
+      <producent>OEM</producent>
+      <cena_sztuka>0.35</cena_sztuka>
+      <image>img_xml/dioda.jpg</image>
+    </inf>
+    <ilosc>20</ilosc>
+    <suma>7</suma>
+    <dostawa>
+      <kurier>
+        <przewoz>GLS</przewoz>
+        <imie>Wojciech</imie>
+        <nazwisko>Stanczyk</nazwisko>
+        <tryb>Express</tryb>
+      </kurier>
+      <miasto>Gdynia</miasto>
+      <ulica>Partyzantow</ulica>
+      <numer>65</numer>
+      <data>2020-10-09</data>
+    </dostawa>
+  </towar>
+
+  <towar xmlns:kod_produktu="HWM-667-CC" xmlns:data_zamowienia="23.10.2020">
+    <inf link="https://botland.com.pl/pl/analogowe-czujniki-odleglosci/2707-sharp-gp2y0a60szlf-analogowy-czujnik-odleglosci-10-150cm-5v-pololu-2474.html">
+      <nazwa>Sharp GP2Y0A60SZLF</nazwa>
+      <rodzaj>czujnik</rodzaj>
+      <producent>Pololu</producent>
+      <cena_sztuka>69.90</cena_sztuka>
+      <image>img_xml/czujnik.jpg</image>
+    </inf>
+    <ilosc>dwa</ilosc>
+    <suma>139.98</suma>
+    <dostawa>
+      <kurier>
+        <przewoz>FEDEX</przewoz>
+        <imie>Andrzej</imie>
+        <nazwisko>Woskowski</nazwisko>
+        <tryb>Express</tryb>
+      </kurier>
+      <miasto>Gdansk</miasto>
+      <ulica>Szeroka</ulica>
+      <numer>34</numer>
+      <data>2020-10-17</data>
+    </dostawa>
+  </towar>
+
+  <towar xmlns:kod_produktu="JKM-003-UG" xmlns:data_zamowienia="2020-10-11">
+    <inf link="https://botland.com.pl/pl/silniki-micro-pololu-seria-hp-high-power/13823-silnik-hp-2101-obustronny-wal-pololu-2216.html">
+      <nazwa>Silnik HP 210:1</nazwa>
+      <rodzaj>silnik</rodzaj>
+      <producent>Pololu</producent>
+      <cena_sztuka>62.90</cena_sztuka>
+      <image>img_xml/silnik.jpg</image>
+    </inf>
+    <ilosc>6</ilosc>
+    <suma>377.40</suma>
+    <dostawa>
+      <kurier>
+        <przewoz>DPD</przewoz>
+        <imie>Waclaw</imie>
+        <nazwisko>Wawer</nazwisko>
+        <tryb>Express</tryb>
+      </kurier>
+      <miasto>Gdansk</miasto>
+      <ulica>Szeroka</ulica>
+      <numer>34</numer>
+      <data>2020-11-25</data>
+    </dostawa>
+  </towar>
+
+
+  <usluga xmlns:data_zlecenia="2020-10-11" xmlns:id="6383839242" xmlns:przyjeto="Tak">
+    <rodzaj>Plytka PCB</rodzaj>
+    <wykonawca strona="https://jlcpcb.com">
+      <firma>JLCPCB</firma>
+      <numer>+<kierunkowy>40</kierunkowy><number>657304234</number></numer>
+    </wykonawca>
+    <koszt>2.50</koszt>
+  </usluga>
+
+
+  <usluga xmlns:data_zlecenia="2020-10-11" xmlns:id="6383839737" xmlns:przyjeto="Nie">
+    <rodzaj>Odlew opon</rodzaj>
+    <wykonawca strona="https://www.poliuretanyczaniec.pl">
+      <firma>Poliuretany Czaniec</firma>
+      <numer>+<kierunkowy>48</kierunkowy><number>334322729</number></numer>
+    </wykonawca>
+    <koszt>80</koszt>
+  </usluga>
+
+</spis>

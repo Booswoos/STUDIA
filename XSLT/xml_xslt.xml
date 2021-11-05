@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xslt.xslt"?>
+
+<spis  xmlns:data_zamowienia="20.10.2020"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+ 
+  <komentarz>Lista zamowien i zlecen</komentarz>
+
+  <towar xmlns:kod_produktu="SSN-125-FM" xmlns:data_zamowienia="2020-10-11">
+    <inf link="https://botland.com.pl/pl/diody-led/4538-dioda-led-8mm-czerwona-10szt.html">
+      <nazwa>Dioda LED 8mm czerwona</nazwa>
+      <rodzaj>dioda</rodzaj>
+      <opis>
+        Dioda LED 8 mm czerwona dyfuzyjna. Cena za 10 sztuk. Kolor emitowanego światła: czerwony
+        Średnica soczewki: 8 mm. Napięcie przewodzenia: od 2 V do 2,19 V. Maksymalny prąd: 20 mA. Kąt świecenia: 60°
+      </opis>
+      <producent>OEM</producent>
+      <cena_sztuka>0.35</cena_sztuka>
+      <image>img_xml/dioda.jpg</image>
+    </inf>
+    <ilosc>20</ilosc>
+    <suma waluta="$">7</suma>
+    <dostawa>
+      <kurier>
+        <przewoz>GLS</przewoz>
+        <imie>Wojciech</imie>
+        <nazwisko>Stanczyk</nazwisko>
+        <tryb>Express</tryb>
+      </kurier>
+      <miasto>Gdynia</miasto>
+      <ulica>Partyzantow</ulica>
+      <numer>65</numer>
+      <data>2020-10-09</data>
+    </dostawa>
+  </towar>
+
+  <towar xmlns:kod_produktu="HWM-667-CC" xmlns:data_zamowienia="23.10.2020">
+    <inf link="https://botland.com.pl/pl/analogowe-czujniki-odleglosci/2707-sharp-gp2y0a60szlf-analogowy-czujnik-odleglosci-10-150cm-5v-pololu-2474.html">
+      <nazwa>Sharp GP2Y0A60SZLF</nazwa>
+      <rodzaj>czujnik</rodzaj>
+      <opis>
+        Czujnik pozwala wykrywać obiekty w odległości od 10 cm do 150 cm. Wyjściem jest napięciowy sygnał analogowy, którego wartość zależna jest od odległości pomiędzy wykrytym obiektem a sensorem. Im obiekt znajduje się bliżej, tym napięcie na wyjściu jest wyższe. Częstotliwość odświeżania danych wynosi 60 Hz.
+
+        analogowy czujnik odległości Sharp - PololuSensor znajduje się na podstawce PCB, która posiada złącza goldpin raster 2,54 mm zgodne z popularnymi płytkami stykowymi. Listwę należy przylutować we własnym zakresie wybierając pomiędzy prostą i kątową. Montaż układu umożliwia otwór na śrubkę o średnicy 3,15 mm.
+      </opis>     
+      <producent>Pololu</producent>
+      <cena_sztuka>69.90</cena_sztuka>
+      <image>img_xml/czujnik.jpg</image>
+    </inf>
+    <ilosc>dwa</ilosc>
+    <suma waluta="$">139.98</suma>
+    <dostawa>
+      <kurier>
+        <przewoz>FEDEX</przewoz>
+        <imie>Andrzej</imie>
+        <nazwisko>Woskowski</nazwisko>
+        <tryb>Express</tryb>
+      </kurier>
+      <miasto>Gdansk</miasto>
+      <ulica>Szeroka</ulica>
+      <numer>34</numer>
+      <data>2020-10-17</data>
+    </dostawa>
+  </towar>
+
+  <towar xmlns:kod_produktu="JKM-003-UG" xmlns:data_zamowienia="2020-10-11">
+    <inf link="https://botland.com.pl/pl/silniki-micro-pololu-seria-hp-high-power/13823-silnik-hp-2101-obustronny-wal-pololu-2216.html">
+      <nazwa>Silnik HP 210:1</nazwa>
+      <rodzaj>silnik</rodzaj>
+      <opis>Niewielkie, lekkie a zarazem mocne silniki firmy Pololu wykorzystywane są przez konstruktorów robotów jako jednostki napędowe. Urządzenia mogą być zasilane napięciem do 9 V, mocy użytecznej nabierają powyżej 3 V. Optymalne napięcie, przy którym stosunek mocy do wytrzymałości jest najkorzystniejszy, wynosi 6 V.</opis>
+      <producent>Pololu</producent>
+      <cena_sztuka>62.90</cena_sztuka>
+      <image>img_xml/silnik.jpg</image>
+    </inf>
+    <ilosc>3</ilosc>
+    <ilosc>6</ilosc>
+    <ilosc>10</ilosc>
+    <suma waluta="PLN">629.00</suma>
+    <dostawa>
+      <kurier>
+        <przewoz>DPD</przewoz>
+        <imie>Waclaw</imie>
+        <nazwisko>Wawer</nazwisko>
+        <tryb>Express</tryb>
+      </kurier>
+      <miasto>Gdansk</miasto>
+      <ulica>Szeroka</ulica>
+      <numer>34</numer>
+      <data>2020-11-25</data>
+    </dostawa>
+  </towar>
+
+
+  <usluga xmlns:data_zlecenia="2020-10-11" xmlns:id="6383839242" xmlns:przyjeto="Tak">
+    <rodzaj>Plytka PCB</rodzaj>
+    <wykonawca strona="https://jlcpcb.com">
+      <firma>JLCPCB</firma>
+      <numer>
+        <kierunkowy znak="-">40</kierunkowy><number>657304234</number>
+      </numer>
+    </wykonawca>
+    <koszt>2.50</koszt>
+  </usluga>
+
+
+  <usluga xmlns:data_zlecenia="2020-10-11" xmlns:id="6383839737" xmlns:przyjeto="Nie">
+    <rodzaj>Odlew opon</rodzaj>
+    <wykonawca strona="https://www.poliuretanyczaniec.pl">
+      <firma>Poliuretany Czaniec</firma>
+      <numer>
+        <kierunkowy znak="+">48</kierunkowy><number>334322729</number>
+      </numer>
+    </wykonawca>
+    <koszt>80</koszt>
+  </usluga>
+
+</spis>

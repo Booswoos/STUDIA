@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:id="6383839737" xmlns:data_zlecenia="2020-10-11" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:kod_produktu="JKM-003-UG" xmlns:przyjeto="Nie" xmlns:data_zamowienia="2020-10-11" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:My.Namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="spis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="komentarz" type="xs:string" />
+        <xs:element maxOccurs="unbounded" name="towar">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="inf">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nazwa" type="xs:string" />
+                    <xs:element name="rodzaj" type="xs:string" />
+                    <xs:element name="producent" type="xs:string" />
+                    <xs:element name="cena_sztuka" type="xs:decimal" />
+                    <xs:element name="image" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="link" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ilosc" type="xs:unsignedByte" />
+              <xs:element name="suma" type="xs:decimal" />
+              <xs:element name="dostawa">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="kurier">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="przewoz" type="xs:string" />
+                          <xs:element name="imie" type="xs:string" />
+                          <xs:element name="nazwisko" type="xs:string" />
+                          <xs:element name="tryb" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="miasto" type="xs:string" />
+                    <xs:element name="ulica" type="xs:string" />
+                    <xs:element name="numer" type="xs:unsignedByte" />
+                    <xs:element name="data" type="xs:date" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element maxOccurs="unbounded" name="usluga">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="rodzaj" type="xs:string" />
+              <xs:element name="wykonawca">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="firma" type="xs:string" />
+                    <xs:element name="numer">
+                      <xs:complexType mixed="true">
+                        <xs:sequence>
+                          <xs:element name="kierunkowy" type="xs:unsignedByte" />
+                          <xs:element name="number" type="xs:unsignedInt" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="strona" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="koszt" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

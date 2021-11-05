@@ -1,0 +1,5 @@
+IDENTA Tesco Gdansk
+IDENTB Intermarche Gdynia
+IDENTC Tesco Torun
+IDENTD Biedronka Sopot
+IDENTE Lidl Wroclaw

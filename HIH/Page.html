@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="StyleSheet1.css">
+
+    <title>My Hobby</title>
+
+
+<script>  //clock
+
+
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById("ClockDisplay").innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+
+    //DROP Menu
+
+function Drop_Function(){
+    var status = document.getElementById("dropthis");
+    if (status.style.display == "none") { status.style.display = "block"; but.style.backgroundColor="black"; }
+    else { status.style.display = "none";}
+    
+}
+
+
+    
+        
+
+</script>
+
+
+</head>
+
+<body onload="startTime()">
+
+
+    <header id="header">
+
+        ROBOTYKA
+
+
+
+        <div class="icon">
+            <a href="https://www.facebook.com">
+                <img src="icons/FB.png" id="fb" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com">
+                <img src="icons/IG.png" id="ig" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com">
+                <img src="icons/YT.png" id="yt" alt="Youtube">
+            </a>
+
+        </div>
+
+
+    </header>
+
+   
+
+<section>
+    <nav>
+
+        <a href="Schedule.html">Schedule</a>
+        <a href="">Aktualności</a>
+       
+        <button class="drop" onclick="Drop_Function()" id="but">
+            Galeria
+        </button>
+        <div class="dropdown-container" id="dropthis">
+            <a href="gallery_2019.html">2019</a>
+            <a href="gallery.html">2020</a>
+            <a href="">2021</a>
+        </div>
+        <a href="search.html">Contact</a>
+
+    </nav>
+    
+    
+    
+    <article>
+       <br><br>
+
+        <a href="#last" class="anchor">Ostatni Akapit</a>
+        <br>
+
+       
+       
+        <h1 id="first">Id alias ipsum et voluptatem galisum. </h1>
+        <p>Lorem ipsum dolor sit amet. Ut eius nostrum sit architecto voluptate est corrupti commodi in fugiat deleniti eum corporis quas et ipsam laborum. Eos suscipit ipsa sit reiciendis <a>corporis sit nobis dolorum At esse libero ut perspiciatis optio est internos.</a> Non vero voluptates sit officia nostrum ut sint rerum et dolorem consequatur eum odit ullam non officia tempora et odio totam. Eum fugit quam sed quos iste sed maxime quasi! Rem voluptatem rerum qui labore modi ut ipsum enim est tenetur consequatur 33 quisquam beatae id pariatur obcaecati in sunt placeat. </p>
+        <br><br>
+        <h1>Sed accusamus numquam hic esse eius qui repudiandae quia. </h1>
+        <p>Aut impedit consequuntur et nemo laboriosam est explicabo voluptatibus sed incidunt sint. Qui error quaerat qui consequatur aliquam sit quisquam asperiores ut voluptatem veniam qui perferendis esse. Et eaque incidunt qui asperiores laborum ab accusantium illum.<a> Consequatur cumque ut quidem laboriosam et error voluptates At vitae dolor</a>. Hic nulla minus et repellat sint eos quia numquam non mollitia corporis. Et repudiandae molestiae  repellat facere in error error et accusamus amet qui quia consequuntur! Aut dolores dolorum ut reprehenderit esse est nihil porro sed suscipit asperiores et dolorum unde id consequatur sunt. </p>
+        <br><br>
+        <h3>Qui praesentium voluptas et excepturi quia sit minima eius. </h3>
+        <p>Eum dignissimos internos eum accusantium labore ut nihil ullam aut eaque voluptas. Non esse nulla et veniam omnis aut dolorum accusamus eos corrupti odit qui iure necessitatibus qui sunt nesciunt sit placeat mollitia. Et deserunt fugiat ad quasi temporibus ex magni vero. Et natus officiis et nesciunt exercitationem sit veniam accusamus non aliquid assumenda eum quaerat soluta. Ad dolorem iusto aut minima rerum est eligendi dolores hic ipsam dolorem ex omnis adipisci eos nesciunt quia. Est facilis porro sit rerum reiciendis et libero soluta eum dolor nihil et assumenda debitis. Sed amet velit sed sunt quaerat et consectetur error a amet aspernatur ab quia minus est voluptatem excepturi qui voluptas vitae. Aut omnis deserunt nam labore maiores ab suscipit velit aut tempora voluptas in quia impedit? Qui aliquam asperiores est ducimus quasi qui magnam incidunt sed ipsam voluptatem. </p>
+        
+
+        <ul>
+            <li>Non quam sint a cupiditate illum. </li>
+            <li>Quo placeat consectetur sed quam adipisci ab repellendus enim. </li>
+            <li>Id tenetur nihil  minima dolorum! </li>
+            <li>Ut libero vero et exercitationem enim et aspernatur repudiandae et delectus illo. </li>
+            <li>Et ratione quod eum doloremque distinctio. </li>
+        </ul>
+        <br>
+        <h3>Sed voluptates molestiae sit earum natus id cumque aspernatur. </h3>
+        <p id="last">Et quia dolores et tempora minima ut quia omnis qui aliquam facilis et deserunt sapiente ut impedit quisquam. Hic mollitia facilis ut ipsam reiciendis sit cumque odio et dolore sunt et consequatur harum. Id voluptas tenetur aut dolorem rerum et galisum consequuntur. Ut eaque consectetur aut explicabo fuga et voluptates tempore? Ut nesciunt quasi qui voluptas accusantium 33 corrupti ipsam ab earum dolorem sit voluptatum sunt sed excepturi dolorum. </p>
+        <br />
+        <a href="#first" class="anchor">Pierwszy Akapit</a>
+     
+    </article>
+
+
+
+    <div id="add">
+        <div id="ClockDisplay" class="clock">
+
+        </div>
+
+    </div>
+
+
+
+</section>
+
+
+<footer>
+    Bartosz Janicki
+    <br />
+    s185860 ACiR I
+</footer>
+
+
+
+
+</body>
+</html>

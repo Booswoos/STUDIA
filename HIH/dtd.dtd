@@ -1,0 +1,43 @@
+
+<!ELEMENT spis (komentarz,towar+,usluga+)>
+<!ELEMENT komentarz (#PCDATA)>
+<!ELEMENT towar (inf,ilosc,suma,dostawa)>
+<!ELEMENT inf (nazwa,rodzaj,producent,cena_sztuka,image)>
+<!ELEMENT nazwa (#PCDATA)>
+<!ELEMENT rodzaj (#PCDATA)>
+<!ELEMENT producent (#PCDATA)>
+<!ELEMENT cena_sztuka (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT ilosc (#PCDATA)>
+<!ELEMENT suma (#PCDATA)>
+<!ELEMENT dostawa (kurier,miasto,ulica,numer,data)> 
+<!ELEMENT miasto (#PCDATA)>
+<!ELEMENT ulica (#PCDATA)>
+<!ELEMENT numer (#PCDATA)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT usluga (rodzaj,wykonawca,koszt)>
+<!ELEMENT wykonawca (firma, numerr)>
+<!ELEMENT firma (#PCDATA)>
+<!ELEMENT koszt (#PCDATA)>
+<!ELEMENT kurier (przewoz,imie,nazwisko,tryb)>
+<!ELEMENT przewoz (#PCDATA)>
+<!ELEMENT imie (#PCDATA)>
+<!ELEMENT nazwisko (#PCDATA)>
+<!ELEMENT tryb (#PCDATA)>
+<!ELEMENT numerr (kierunkowy,number)>
+<!ELEMENT kierunkowy (#PCDATA)>
+<!ENTITY miasto "Gdansk">
+<!ENTITY kierunkowy SYSTEM "external.txt">
+<!ENTITY % status "(TAK|NIE)">
+<!ENTITY % ile "(1|2|3|4|5|6)">
+
+<!ATTLIST komentarz zawartosc %ile; "2">
+<!ATTLIST spis data_zamowienia CDATA #REQUIRED>
+<!ATTLIST towar kod_produktu ID #REQUIRED>
+<!ATTLIST towar data_zamowienia CDATA #REQUIRED> 
+<!ATTLIST inf link CDATA  #IMPLIED>
+<!ATTLIST usluga data_zlecenia CDATA #REQUIRED>
+<!ATTLIST usluga id ID #REQUIRED>
+<!ATTLIST wykonawca strona CDATA "https://google.com">
+<!ATTLIST usluga przyjeto %status; "NIE">

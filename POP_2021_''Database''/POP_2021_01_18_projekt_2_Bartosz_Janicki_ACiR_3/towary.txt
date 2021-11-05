@@ -1,0 +1,5 @@
+TOWA  Herbata 10.50
+TOWB  Kawa 8.99
+TOWC Michalki 10.00
+TOWD Chleb 2.00
+TOWE Mleko 3.50

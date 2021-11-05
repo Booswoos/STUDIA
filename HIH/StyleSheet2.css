@@ -1,0 +1,273 @@
+﻿body {
+    background-color: #FAFAD2;
+    margin: 25px;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background-image: url(background_header.png);
+    text-align: center;
+    font-family: 'Brush Script MT';
+    font-size: 68px;
+    font-weight: bold;
+    color: rgb(145,140,142);
+}
+
+section {
+    min-height: 1400px;
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+nav {
+    min-height: 1400px;
+    width: 12%;
+    float: left;
+    background-color: lightslategray;
+    overflow: hidden;
+}
+
+article {
+    min-height: 1400px;
+    width: 78%;
+    float: left;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #00FFFF, #7FFF00);
+    background-size: 400% 400%;
+    animation: example 12s ease infinite;
+}
+
+    article p {
+        font-size: 20px;
+    }
+
+    article a {
+        color: #5B97CE;
+        text-decoration: underline;
+    }
+
+    article h1 {
+        font-weight: 700;
+        font-size: 30px;
+        margin-left: 15px;
+    }
+
+h1::first-letter {
+    font-size: 130%;
+    color: #8A2BE2;
+}
+
+article h3 {
+    font-size: 30px;
+    font-style: italic;
+    margin-left: 15px;
+}
+
+article li {
+    font-family: fantasy;
+    font-size: 24px;
+    color: crimson;
+}
+
+#add {
+    min-height: 1400px;
+    width: 10%;
+    float: right;
+    background-color: lightslategray;
+}
+
+
+
+footer {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    font-family: 'Brush Script MT';
+    font-weight: 400;
+    font-size: 36px;
+}
+
+nav a {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: left;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.drop {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+nav a:hover {
+    color: green;
+}
+
+.drop:hover {
+    color: green;
+}
+
+
+.dropdown-container {
+    display: none;
+    background-color: #9494b8;
+}
+
+.clock {
+    position: absolute;
+    top: 10%;
+    right: 4%;
+    border: 3px solid #010101;
+    font-size: 27px;
+    padding: 3px 3px 3px 3px;
+    font-weight: bold;
+}
+
+.icon {
+    float: right;
+    margin-top: 15px;
+    margin-right: 25px;
+}
+
+    .icon a {
+        text-decoration: none;
+    }
+
+#fb {
+    margin: 10px;
+}
+
+#ig {
+    margin: 10px;
+}
+
+#yt {
+    margin: 10px;
+}
+
+.anchor {
+    margin-left: 25px;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+table {
+    border: 11px double black;
+    margin-left: auto;
+    margin-top: auto;
+    margin-right: auto;
+}
+
+th {
+    border: 2px solid magenta;
+    font-size: 28px;
+}
+
+td {
+    font-size: 20px;
+}
+
+.photo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    text-align: center;
+}
+
+    .photo > img:hover {
+        width: 500px;
+        height: 400px;
+    }
+
+
+form {
+    margin-top: 15%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=text] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 12px 0;
+    box-sizing: border-box;
+    border: groove;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=reset], input[type=button], input[type=submit] {
+    background: linear-gradient(33deg, #e2330b, #7ea663, #457ec1, #c246e6);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.wyszukaj {
+    font-size: 26px;
+    color:black;
+    text-shadow: 1px 1px rgb(255,11,13);
+    text-decoration: solid;
+}
+
+@keyframes example {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@media all and (min-width:480px) and (max-width:1280px) {
+    header, footer, section {
+        float: none;
+        width: 100%;
+        margin: 10px;
+    }
+
+    .clock {
+        width: 7%;
+        margin-right: 1px;
+        font-size: 16px;
+        position: absolute;
+        top: 10%;
+        right: 3%;
+    }
+}
+
+

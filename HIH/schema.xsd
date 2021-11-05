@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="urn:My.Namespace"
+            xmlns="urn:My.Namespace"
+    elementFormDefault="qualified"
+    
+    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+
+
+  <xs:annotation>
+   <xs:documentation xml:lang="pl">
+     XML Schema do dziennego zestawienia.
+   </xs:documentation>
+  </xs:annotation>
+
+
+
+  <xs:element name="spis" type="spisType"/>
+
+  <xs:complexType name="spisType">
+    <xs:sequence>
+      <xs:element name="komentarz" type="listType"  minOccurs="1" maxOccurs="unbounded" ></xs:element>
+      <xs:element name="towar" type="towarType" maxOccurs="unbounded"/>
+      <xs:element name="usluga" type="uslugaType" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="data_powstania" type="xs:date"/>
+  </xs:complexType>
+
+  <xs:complexType name="towarType">
+    <xs:sequence>
+      <xs:element name="inf" type="infType"> </xs:element>
+      <xs:element name="ilosc" type="StringOrIntType"></xs:element>
+      <xs:element ref="suma"></xs:element>
+      <xs:element name="dostawa" type="dostawaType"></xs:element>
+    </xs:sequence>
+    <xs:attribute ref="kod_produktu"/>
+    <xs:attribute ref="data_zamowienia"/>
+  </xs:complexType>
+
+  <xs:complexType name="infType">
+    <xs:sequence>
+      <xs:element name="nazwa" type="xs:string"></xs:element>
+      <xs:element name="rodzaj" type="rodzajType"></xs:element>
+      <xs:element name="producent" type="linkType"></xs:element>
+      <xs:element name="cena_sztuka" type="cenaType"></xs:element>
+      <xs:element ref="image" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="link" type="linkType" use="required"></xs:attribute>
+  </xs:complexType>
+
+  <xs:simpleType name="cenaType">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"></xs:minExclusive>
+      <xs:maxExclusive value="5000"></xs:maxExclusive>      
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="rodzajType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="czujnik" />
+      <xs:enumeration value="silnik" />
+      <xs:enumeration value="dioda" />
+      <xs:enumeration value="sterownik"/>
+      <xs:enumeration value="mostek"/>
+      <xs:enumeration value="plytka"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="dostawaType">
+    <xs:sequence>
+      <xs:element name="kurier" type="kurierInfo"></xs:element>
+      <xs:element name="miasto" type="longStringType"></xs:element>
+      <xs:element name="ulica" type="longStringType"></xs:element>
+      <xs:element name="numer" type="xs:integer"></xs:element>
+      <xs:element name="data" type="xs:date"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+
+ 
+
+  <xs:element name="suma" type="sumaType"></xs:element>
+  <xs:attribute name="kod_produktu" type="kodType"></xs:attribute>
+  <xs:attribute name="data_zamowienia" type="xs:date"></xs:attribute>
+  <xs:attribute name="data_zlecenia" type="xs:date"></xs:attribute>
+  <xs:attribute name="id" type="shortStringType"></xs:attribute>
+  <xs:attribute name="przyjeto" type="stanType"></xs:attribute>
+  <xs:element name="link" type="linkType"></xs:element>
+  <xs:element name="image" type="linkType"></xs:element>
+
+  <xs:simpleType name ="stanType">
+    <xs:restriction base="shortStringType">
+      <xs:enumeration value="Tak"/>
+      <xs:enumeration value="Nie"/>   
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="longStringType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="shortStringType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+    <xs:simpleType name="sumaType">
+     <xs:restriction base="xs:decimal">
+       <xs:minExclusive value="1"/>
+       <xs:maxExclusive value="10000"/>
+     </xs:restriction>
+    </xs:simpleType>
+
+  <xs:simpleType name="kodType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{3}-/d{3}-/[A-Z]{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="linkType">
+    <xs:restriction base="xs:anyURI"></xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="StringOrIntType">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+
+      <xs:simpleType>
+        <xs:restriction base="xs:int"/>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+  
+  <xs:complexType name="uslugaType">
+    <xs:sequence>
+      <xs:element name="rodzaj" type="longStringType"></xs:element>
+      <xs:element name="wykonawca" type="wykonawcaType"></xs:element>
+      <xs:element name="koszt" type="cenaType"></xs:element>
+    </xs:sequence>
+    <xs:attribute ref="data_zlecenia"></xs:attribute>
+    <xs:attribute ref="id"></xs:attribute>
+    <xs:attribute ref="przyjeto"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="wykonawcaType">
+    <xs:sequence>
+      <xs:element name="firma" type="longStringType"></xs:element>
+      <xs:element name="numer" type="numerType"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="strona" type="linkType"> </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="numerType" mixed="true">
+    <xs:sequence>
+      <xs:element name="kierunkowy" type="xs:decimal"></xs:element>
+      <xs:element name ="number" type="numberType"></xs:element>
+    </xs:sequence>
+    
+  </xs:complexType>
+
+  <xs:simpleType name="numberType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{9}"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+
+  <xs:simpleType name="info">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="express" />
+      <xs:enumeration value="standard" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="kurierType">
+    <xs:sequence>
+      <xs:element name="przewoz" type="xs:string"/>
+      <xs:element name="imie" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="kurierInfo">
+    <xs:complexContent>
+      <xs:extension base="kurierType">
+        <xs:sequence>         
+          <xs:element name="nazwisko" type="xs:string"/>
+         <xs:element name="tryb" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="listType">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+  
+  
+</xs:schema>
