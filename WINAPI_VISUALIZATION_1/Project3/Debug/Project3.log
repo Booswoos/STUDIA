@@ -1,0 +1,23 @@
+﻿  main.cpp
+c:\users\bartek\source\repos\project3\project3\main.cpp(23): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(50): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(51): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(53): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(54): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(55): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(57): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(123): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\bartek\source\repos\project3\project3\main.cpp(129): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\bartek\source\repos\project3\project3\main.cpp(183): warning C4244: 'argument': conversion from 'float' to 'UINT', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(208): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(224): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(233): warning C4018: '<': signed/unsigned mismatch
+c:\users\bartek\source\repos\project3\project3\main.cpp(237): warning C4244: 'argument': conversion from 'double' to 'Gdiplus::REAL', possible loss of data
+c:\users\bartek\source\repos\project3\project3\main.cpp(246): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+  Project3.vcxproj -> C:\Users\Bartek\source\Repos\Project3\Debug\Project3.exe

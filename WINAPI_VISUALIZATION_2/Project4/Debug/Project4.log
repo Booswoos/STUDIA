@@ -1,0 +1,13 @@
+﻿  main.cpp
+c:\users\bartek\source\repos\project4\project4\main.cpp(20): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\bartek\source\repos\project4\project4\main.cpp(47): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project4\project4\main.cpp(48): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project4\project4\main.cpp(49): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project4\project4\main.cpp(50): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project4\project4\main.cpp(51): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project4\project4\main.cpp(52): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project4\project4\main.cpp(54): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project4\project4\main.cpp(56): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project4\project4\main.cpp(58): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\bartek\source\repos\project4\project4\main.cpp(185): warning C4018: '<': signed/unsigned mismatch
+  Project4.vcxproj -> C:\Users\Bartek\source\Repos\Project4\Debug\Project4.exe
