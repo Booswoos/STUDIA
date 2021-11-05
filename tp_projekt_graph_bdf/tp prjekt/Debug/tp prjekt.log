@@ -1,0 +1,3 @@
+﻿  tp prjekt.cpp
+c:\users\bartek\source\repos\tp prjekt\tp prjekt\tp prjekt.cpp(229): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  tp prjekt.vcxproj -> C:\Users\Bartek\source\Repos\tp prjekt\Debug\tp prjekt.exe

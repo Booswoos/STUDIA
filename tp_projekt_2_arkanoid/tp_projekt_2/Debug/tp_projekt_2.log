@@ -1,0 +1,4 @@
+﻿  tp_projekt_2.cpp
+c:\users\bartek\source\repos\tp_projekt_2\tp_projekt_2\tp_projekt_2.cpp(35): warning C4018: '>=': signed/unsigned mismatch
+c:\users\bartek\source\repos\tp_projekt_2\tp_projekt_2\tp_projekt_2.cpp(153): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  tp_projekt_2.vcxproj -> C:\Users\Bartek\source\Repos\tp_projekt_2\Debug\tp_projekt_2.exe
